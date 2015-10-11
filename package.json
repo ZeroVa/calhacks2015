@@ -1,0 +1,26 @@
+{
+  "name": "calhacks2015",
+  "version": "1.0.0",
+  "description": "Elizabethan meme generator",
+  "main": "program.js",
+  "scripts": {
+    "test": "node program.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ZeroVa/calhacks2015.git"
+  },
+  "keywords": [
+    "meme",
+    "node",
+    "songs",
+    "lyrics",
+    "poetry"
+  ],
+  "author": "Ahsan Zahid, Terry Tsai, Miguel Ugalde",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ZeroVa/calhacks2015/issues"
+  },
+  "homepage": "https://github.com/ZeroVa/calhacks2015#readme"
+}
