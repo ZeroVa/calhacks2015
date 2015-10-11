@@ -6,11 +6,11 @@ var translator = require('./translator.js');
 
 translator.readJson();
 
-app.use(express.static(__dirname));
+app.use(express.static('public'));
 
 app.get('/meme/:memeText', function(req, res){
 	var correctedText = decodeURI(req.params.memeText);
-	res.send(translator.translateWords(correctedText));
+	res.status(200).send(translator.translateWords(correctedText));
 });
 
 app.get('/imager/:imageText', function(req, res) {
@@ -19,21 +19,21 @@ app.get('/imager/:imageText', function(req, res) {
 
 	if (fancyText.indexOf("*") !=-1) {
 		var fancyArr = fancyText.split("*");
-		caption.path("ducreux1.jpg",{
+		caption.path("public/ducreux1.jpg",{
 			caption : fancyArr[0],
 			bottomCaption : fancyArr[1],
-			outputFile : "result.jpg"
+			outputFile : "public/result.jpg"
 		} ,function(err,captionedImagePath){
 			console.log(captionedImagePath);
-			res.send("<a href=\" http://niceme.me\"><img src=\"" + "http://104.236.147.66:3000/result.jpg" + "\" alt=\"Result\" ></a>");
+			res.status(200).send("<a href=\" http://niceme.me\"><img src=\"" + "/result.jpg" + "\" alt=\"Result\" ></a>");
 		});
 	} else {
-		caption.path("ducreux1.jpg",{
+		caption.path("public/ducreux1.jpg",{
 			caption : fancyText,
-			outputFile : "result.jpg"
+			outputFile : "public/result.jpg"
 		} ,function(err,captionedImagePath){
 			console.log(captionedImagePath);
-			res.send("<a href=\" http://niceme.me\"><img src=\"" + "http://104.236.147.66:3000/result.jpg" + "\" alt=\"Result\" ></a>");
+			res.status(200).send("<a href=\" http://niceme.me\"><img src=\"" + "/result.jpg" + "\" alt=\"Result\" ></a>");
 		});
 	}
 });
