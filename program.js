@@ -6,7 +6,7 @@ var translator = require('./translator.js');
 
 translator.readJson();
 
-app.use(express.static('public'));
+app.use(express.static(__dirname + '/public'));
 
 app.get('/meme/:memeText', function(req, res){
 	var correctedText = decodeURI(req.params.memeText);
