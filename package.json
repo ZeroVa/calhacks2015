@@ -6,6 +6,11 @@
   "scripts": {
     "test": "node program.js"
   },
+"dependencies" : {
+	"express": ">= 1.2.0",
+	"memcanvas": "1.x.x"
+
+},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ZeroVa/calhacks2015.git"
