@@ -1,12 +1,42 @@
-!doctype html
+<!doctype html>
 <html>
 <head>
-<title>Time to make a great meme! </title>
+<link rel = "stylesheet" href = "css/bootstrap.css">
+<link rel = "stylesheet" href = "css/styles.css">
+<title>Ye Olde Meme Machine </title>
 </head>
 
 
 <body>
-<h1> Time to make a great meme! </h1>
+
+<div class="container">
+	<div class="row outer-row">
+		<div class="col-md-8 col-md-offset-2">
+			<h1 class="meme-form-heading">Welcome to Ye Olde Meme Machine!</h1>
+			<h2 class="meme-form-heading">Time to make a great meme!</h2>
+			<hr>
+
+			<p>Enter text into the following boxes (preferrably song lyrics), and they will be translated into Elizabethan English, and will be turned into a meme.</p>
+
+			<form action="/imager" method="get" class="meme-form">
+				<div class="row inner-row">
+					<div class="col-md-6">
+						<label for="topText">Top Text</label>
+						<input type="text" name="topText">
+					</div>
+					<div class="col-md-6">
+						<label for="bottomText">Bottom Text</label>
+						<input type="text" name="bottomText">
+					</div>
+				</div>
+				<input class="btn btn-lg btn-danger meme-submit" type="submit" value="Create a meme!">
+				
+
+
+			</form>
+		</div>
+	</div>
+</div>
 
 </body>
 

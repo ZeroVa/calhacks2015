@@ -13,8 +13,16 @@ app.get('/meme/:memeText', function(req, res){
 	res.status(200).send(translator.translateWords(correctedText));
 });
 
-app.get('/imager/:imageText', function(req, res) {
-	var correctedText = decodeURI(req.params.imageText);
+app.get('/imager', function(req, res) {
+	var correctedTop = decodeURI(req.query.topText);
+	var correctedBottom = decodeURI(req.query.bottomText);
+	if (correctedBottom){ 
+		var correctedText = correctedTop + "*" + correctedBottom;
+	}
+	else {
+		var correctedText = correctedTop;
+	}
+	//var correctedText = decodeURI(req.params.imageText);
 	var fancyText = translator.translateWords(correctedText);
 
 	if (fancyText.indexOf("*") !=-1) {

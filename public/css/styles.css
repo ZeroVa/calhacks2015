@@ -1,0 +1,28 @@
+body{
+	background-color: cornflowerblue;
+}
+
+
+.meme-form{
+	font-size: 1.3em;
+
+}
+
+.meme-form-heading{
+	text-align: center;
+}
+
+.meme-form label{
+	padding:10px;
+}
+
+.meme-form inpuc{
+
+}
+.meme-form > * {
+	padding: 10px;
+}
+
+.meme-form >* >* {
+	padding: 10px;
+}

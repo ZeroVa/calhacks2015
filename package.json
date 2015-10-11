@@ -8,7 +8,7 @@
   },
 "dependencies" : {
 	"express": ">= 1.2.0",
-	"memcanvas": "1.x.x"
+  "caption": "0.x.x"
 
 },
   "repository": {
